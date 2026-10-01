@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultherapy Prime | 官方連結</title>
+    
+    <!-- 引入 Tailwind CSS 快速排版 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 引入與 Logo 相符的無襯線字體 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            /* 套用字體，英文優先，中文其次 */
+            font-family: 'Montserrat', 'Noto Sans TC', sans-serif;
+            background-color: #0a0a0a;
+            color: #ffffff;
+        }
+
+        /* 尊爵金漸層文字特效 */
+        .gold-text {
+            background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* 按鈕預設狀態與轉場動畫 */
+        .link-btn {
+            border-color: #d4af37;
+            color: #d4af37;
+            transition: all 0.3s ease;
+            letter-spacing: 0.05em;
+        }
+
+        /* 按鈕懸停(Hover)特效：背景變金、文字變黑、按鈕微幅上浮 */
+        .link-btn:hover {
+            background-color: #d4af37;
+            color: #000000;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        /* 進場浮現動畫 */
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 動畫時間差，讓元素依序出現 */
+        .delay-1 { animation-delay: 0.1s; }
+        .delay-2 { animation-delay: 0.2s; }
+        .delay-3 { animation-delay: 0.3s; }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col items-center py-16 px-4">
+    <div class="w-full max-w-md flex flex-col items-center">
+        
+        <!-- 頭像 / 品牌 Logo -->
+        <div class="fade-in-up mb-6">
+            <!-- 圓形白底容器，確保你的白底黑字 Logo 完美呈現 -->
+            <div class="w-32 h-32 rounded-full overflow-hidden bg-white border-2 border-[#d4af37] flex items-center justify-center p-3 shadow-lg shadow-yellow-900/20">
+                <!-- 圖片加入 onerror 確保預覽時若找不到原圖能有替代圖片顯示 -->
+                <img src="2026_美國音波二代logo_白底黑LOGO.jpg" 
+                     onerror="this.src='https://placehold.co/400x400/ffffff/000000?text=Ultherapy+Prime'" 
+                     alt="Ultherapy Prime Logo" 
+                     class="w-full h-full object-contain">
+            </div>
+        </div>
+
+        <!-- 品牌名稱與標語 -->
+        <h1 class="text-3xl font-semibold mb-2 fade-in-up delay-1 tracking-wider text-center">
+            <span class="gold-text">Ultherapy</span> Prime
+        </h1>
+        <p class="text-gray-400 mb-10 text-sm fade-in-up delay-1 tracking-widest text-center font-light">
+            美國音波二代 極透+
+        </p>
+
+        <!-- 連結清單 -->
+        <div class="w-full space-y-5">
+            <!-- 連結一 -->
+            <a href="https://merzaesthetics.com.tw/ultherapy/" target="_blank" rel="noopener noreferrer" class="block w-full text-center py-4 px-6 rounded-lg border border-[#d4af37] link-btn font-medium fade-in-up delay-2">
+                美國音波二代極透+ 官網
+            </a>
+            
+            <!-- 連結二 -->
+            <a href="https://merzaesthetics.com.tw/ultherapymask/" target="_blank" rel="noopener noreferrer" class="block w-full text-center py-4 px-6 rounded-lg border border-[#d4af37] link-btn font-medium fade-in-up delay-3">
+                美國音波拉提凍膜 官網
+            </a>
+            
+            <!-- 連結三 (請記得將 '#' 替換為實際的 YouTube 網址) -->
+            <a href="#" target="_blank" rel="noopener noreferrer" class="block w-full text-center py-4 px-6 rounded-lg border border-[#d4af37] link-btn font-medium fade-in-up delay-3">
+                台灣品牌大使 賈靜雯形象影片
+            </a>
+        </div>
+        
+        <!-- 頁尾宣告 -->
+        <div class="mt-16 text-xs text-gray-600 fade-in-up delay-3 tracking-wider">
+            &copy; 2026 Ultherapy Prime. All rights reserved.
+        </div>
+        
+    </div>
+</body>
+</html>
